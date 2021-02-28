@@ -190,7 +190,9 @@ body {
 	background-color: #353535;
 	font-family: 'Raleway', sans-serif;
 }
-
+#leaderboard{
+  display:none;
+}
 .wrapper {
 	max-width: 800px;
 	margin: 0 auto;
@@ -289,6 +291,10 @@ button:active {
 			<p class="words"></p>
 		</div>
 	</div>
-  <p style="color:yellow; text-align: center; opacity: .5;padding-top:8px;">Now with 4.20% more memes</p>
+		<p style="color:yellow; text-align: center; opacity: .5;padding-top:8px;" onclick="toggle_visibility('leaderboard')">Now with 4.20% more memes</p><br>
+  		<h6 style="color:grey; text-align: center;" onclick= "toggle_visibility('leaderboard')">Show/Hide Leaderboard</h6>
+  	<div style="text-align: center;" id="leaderboard">
+		<iframe style="background-color : transparent;" src="https://docs.google.com/spreadsheets/d/1g82Vodpm7S3MjUurVpL5fNbyrgyWANeMzUQm8pYPtvQ/pubhtml/sheet?headers=false&amp;gid=0&amp;range=A1:C11" width="143" height="236" allowtransparency="true"></iframe>
+	</div>
 </body>
 </html>
