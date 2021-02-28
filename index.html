@@ -33,9 +33,18 @@
     		seconds--;
     		temp.innerHTML = seconds;
       //this displays the countdown under "Time left"
-    		if (seconds === 0) {
-    			alert("Game over ¯\\_(ツ)_/¯ Your score is " + points + "!!!! 10/10 Would meme again");
-          //when countdown reaches zero the alert shows the score and additional memes
+//     		if (seconds === 0) {
+//     			alert("Game over ¯\\_(ツ)_/¯ Your score is " + points + "!!!! 10/10 Would meme again");
+          //when countdown reaches zero the alert shows the score and additional memes & commented out old alert
+	  	 if(seconds === 0) {swal.fire({
+  title: "Game over! ¯\\_(ツ)_/¯",
+    html:" Your score is " + points + "!!!! 10/10 would meme again. Please <b>Take a screenshot</b> of your score and enter name: " +
+    '<a href="https://docs.google.com/forms/d/e/1FAIpQLSdhy8KJH0fJuwj_ntwTtymxBfgmDvB7bwehaFirDUpY75bGCQ/viewform?usp=sf_link" target="_blank">here</a>' + 
+    '&nbsp; to be added to the leaderboard!',
+  imageUrl: 'https://imageproxy.themaven.net//https%3A%2F%2Fedm.com%2F.image%2FMTc0NjYyNjI0ODg4MjM1Mzg2%2Fscience-of-earworms-explain-why-never-gonna-give-you-up-is-stuck-in-our-heads-30-years-later.png',
+  footer: 'Or why don\'t try a game of &nbsp;' + '<a href="https://codepen.io/micahhowe/pen/OJbvOwZ" target="_blank">Tetris </a>' + '&nbsp; or &nbsp;'+'<a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Pong </a>' + '&nbsp; instead?'
+ }); 
+		//this ^ is the new alert is using sweetalert and it allows me to add links and images to alert and overall quality to the game
     			scoreDiv.innerHTML = "0";
           //resets score
     			words.innerHTML = "";
